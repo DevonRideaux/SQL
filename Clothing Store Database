@@ -1,0 +1,17 @@
+/** Clothing List
+T Shirts (110) $4
+Socks (20) $3
+Shorts (55)$30
+Pants (100)$25
+Underwear (30)$10 **/
+
+CREATE TABLE items (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, material TEXT);
+
+INSERT INTO items VALUES (1, "T-Shirts", 110, 4,"Cotton");
+INSERT INTO items VALUES (2, "Socks", 20, 3, "Cotton");
+INSERT INTO items VALUES (3, "Shorts", 55, 20, "Polyester");
+INSERT INTO items VALUES (4, "Pants", 100, 25, "Denium");
+INSERT INTO items VALUES (5, "Underwear", 30, 10, "Polyester");
+
+SELECT SUM(quantity) FROM items
+ORDER BY price 
